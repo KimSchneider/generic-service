@@ -1,0 +1,40 @@
+{
+  "name": "generic-service",
+  "version": "1.0.0",
+  "description": "Base project for typescript services",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:clean && npm run build:lint && npm run build:exec",
+    "build:clean": "rimraf dist/**/*",
+    "build:lint": "eslint src",
+    "build:exec": "tsc --build",
+    "dev": "SET \"NODE_ENV=development\" && nodemon",
+    "start": "ts-node src/main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KimSchneider/generic-service.git"
+  },
+  "author": "Kim Schneider",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KimSchneider/generic-service/issues"
+  },
+  "homepage": "https://github.com/KimSchneider/generic-service#readme",
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.3",
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.48.0",
+    "@typescript-eslint/parser": "^5.48.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.31.0",
+    "nodemon": "^2.0.20",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
